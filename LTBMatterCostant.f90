@@ -147,19 +147,19 @@
               b(2) = u(1)*dt + b(1)
 
               u(2) = u(1) - dt*(u(1)*((lambda/3.)**(1./2.) + (2.*DEXP(-tapp*(3.*lambda)**(1./2.))*((lambda)/3.)**(1./2.))/&
-              (1. - DEXP(-tapp*(3.*lambda)**(1./2.)))) + b(2)*(-(2.*lambda)/(3.) + (2.*DEXP(-tapp*(3.*lambda)**(1./2.))*lambda)/&
-              ((1.) - DEXP(-tapp*(3.*lambda)**(1./2.))) - (2.*DEXP(-tapp*2.*(3.*lambda)**(1./2.))*lambda)/&
-              (3.*((1.) - DEXP(-tapp*(3.*lambda)**(1./2.)))**2.) + (1.)/(a*2.)))
+              (1. - DEXP(-tapp*(3.*lambda)**(1./2.)))) - b(2)*((2.*lambda)/(3.) + ((2./3.)*DEXP(-tapp*(3.*lambda)**(1./2.))*lambda)/&
+              ((1.) - DEXP(-tapp*(3.*lambda)**(1./2.))) + ((2./3.)*DEXP(-tapp*2.*(3.*lambda)**(1./2.))*lambda)/&
+              (((1.) - DEXP(-tapp*(3.*lambda)**(1./2.)))**2.)) + (1.)/(2.*a))
 
               var = (u(2) - u(1))/(u(1))
 
               if(var >= prec) then
 
                   dt = ABS((prec * u(1))/(2*(u(1)*((lambda/3.)**(1./2.) + (2.*DEXP(-tapp*(3.*lambda)**(1./2.))*&
-                  ((lambda)/3.)**(1./2.))/((1.) - DEXP(-tapp*(3.*lambda)**(1./2.)))) + b(2)*(-(2.*lambda)/(3.) &
-                  +  (2.*DEXP(-tapp*(3.*lambda)**(1./2.))*lambda)/((1.) - DEXP(-tapp*(3.*lambda)**(1./2.))) -&
-                  (2.*DEXP(-tapp*2.*(3.*lambda)**(1./2.))*lambda)/(3.*((1.) - DEXP(-tapp*(3.*lambda)**(1./2.)))**2.) &
-                  + (1.)/(2.*a)))))
+                  ((lambda)/3.)**(1./2.))/((1.) - DEXP(-tapp*(3.*lambda)**(1./2.)))) - b(2)*((2.*lambda)/(3.) &
+                  +  ((2./3.)*DEXP(-tapp*(3.*lambda)**(1./2.))*lambda)/((1.) - DEXP(-tapp*(3.*lambda)**(1./2.))) +&
+                  ((2./3.)*DEXP(-tapp*2.*(3.*lambda)**(1./2.))*lambda)/(((1.) - DEXP(-tapp*(3.*lambda)**(1./2.)))**2.)) &
+                  + (1.)/(2.*a))))
               else
 
                   ok = .FALSE.

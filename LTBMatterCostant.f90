@@ -9,9 +9,6 @@
 !  approximation of spherical simmetry. The software will evaluate the       *
 !  evolution of the time dependance b(t) of the secondary perturbations ,    *
 !  by integrating the equation with a explicit Eulero method.                *
-!  As the equation will have some critic point around t=0, the time step     *
-!  of the integraion will be variable on each different step, so that the    *
-!  precision of the simulation will be the same on each step.                *
 !                                                                            *
 !*****************************************************************************
 

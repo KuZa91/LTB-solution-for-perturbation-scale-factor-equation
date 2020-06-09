@@ -78,7 +78,7 @@
       write (*,*) '-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~'
 
       write (*,*) 'The starting value of a(0) and b(0) will be set by default to 0 !' 
-      write (*,*) 'The value of the first derivative of b in 0, will be in a way to have the scale factor b,/& 
+      write (*,*) 'The value of the first derivative of b in 0, will be set in a way to have the scale factor b,& 
                    following the primary scale factor a, at the start of the simulation'
 
       a = 0.

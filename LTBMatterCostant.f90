@@ -106,7 +106,7 @@
     	write (1,*) ''
     	write (1,*) '#        t           a          b            eta               #'
     	write (1,*) ''
-101   format (4f16.6)
+101   format (f10.5,A,f10.5,A,f10.5,A,f10.5)
 
       write (*,*) '-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~'
 
@@ -114,7 +114,7 @@
 
     ! Writing on file the value of the variables at t = 0
 
-      write (1,101) t,a,b(1),eta
+      write (1,101) t,',',a,',',b(1),',',eta
 
       write (*,*) '-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~'
 
@@ -150,10 +150,10 @@
 
           if(b(2) > 0) then
 		        eta = (b(2)**2)/(a**2)
-		        write (1,101) t,a,b(2),eta
+		        write (1,101) t,',',a,',',b(2),',',eta
           else
                 eta = 0.
-                write (1,101) t,a,0.,eta
+                write (1,101) t,',',a,',',0.,',',eta
    	      endif
 
           u(1) = u(2)

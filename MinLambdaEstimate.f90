@@ -196,7 +196,7 @@
         write (*,*) 'Simulation completed in ',TSTOP-TSTART,' seconds'
 
         write (*,*) '-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~'
-        write (*,*) 'The estimated value of the minimum Lambda is ',lambda,' +- ',num_err
+        write (*,*) 'The estimated value of the minimum Omega Lambda is ',lambda,' +- ',num_err
 
 999   	write (*,*) '-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~'
         write (*,*) 'Do you wish to relaunch the program (y/n)?'

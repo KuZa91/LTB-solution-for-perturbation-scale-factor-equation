@@ -50,7 +50,7 @@
 
       do while(lambda <= 0. .or. lambda > 1.)
            
-            write (*,*) 'Please insert the value of Lambda (between 0 and 1) :'
+            write (*,*) 'Please insert the value of Omega Lambda (between 0 and 1) :'
     	    read (*,*) lambda
 
       end do    
@@ -86,8 +86,8 @@
 
       ! Estimating the value on second step of a
 
-      b(2) = (DEXP(dt*(lambda/3.)**(1./2.))*(1. - DEXP(-dt*(3.*lambda)**(1./2.)))**(2./3.))/&
-              (DEXP((lambda/3.)**(1./2.))*(1. - DEXP(-(3.*lambda)**(1./2.)))**(2./3.))
+      b(2) = (DEXP(dt*(lambda)**(1./2.))*(1. - DEXP(-3*dt*(lambda)**(1./2.)))**(2./3.))/&
+              (DEXP((lambda)**(1./2.))*(1. - DEXP(-3*(lambda)**(1./2.)))**(2./3.))
 
       ! Estimating the value of the first derivative of b in order to have the ratio b/a = 1 at the start of the simulation      
 
@@ -101,7 +101,7 @@
 
     	open (unit = 1, file = 'RisultatiLTBMatterCostant.txt')
     	write (1,*) '################################################################'
-   	  write (1,*) '#             Risultati numerici della simulazione             #'
+   	  write (1,*) '#             Numerical Results of the Simulation                #'
     	write (1,*) '################################################################'
     	write (1,*) ''
     	write (1,*) '#        t           a          b            eta               #'
@@ -135,16 +135,16 @@
 
           if(t>tend) t=tend
 
-          a = (DEXP(t*(lambda/3.)**(1./2.))*(1. - DEXP(-t*(3.*lambda)**(1./2.)))**(2./3.))/&
-              (DEXP((lambda/3.)**(1./2.))*(1. - DEXP(-(3.*lambda)**(1./2.)))**(2./3.))
+          a = (DEXP(t*(lambda)**(1./2.))*(1. - DEXP(-3.*t*(lambda)**(1./2.)))**(2./3.))/&
+              (DEXP((lambda)**(1./2.))*(1. - DEXP(-3.*(lambda)**(1./2.)))**(2./3.))
           
               
           b(2) = u(1)*dt + b(1)
 
-          u(2) = u(1) - dt*(u(1)*((lambda/3.)**(1./2.) + (2.*DEXP(-t*(3.*lambda)**(1./2.))*((lambda)/3.)**(1./2.))/&
-                 (1. - DEXP(-t*(3.*lambda)**(1./2.)))) - b(2)*((2.*lambda)/(3.) + ((2./3.)*DEXP(-t*(3.*lambda)**(1./2.))*lambda)/&
-                 ((1.) - DEXP(-t*(3.*lambda)**(1./2.))) + ((2./3.)*DEXP(-t*2.*(3.*lambda)**(1./2.))*lambda)/&
-                 (((1.) - DEXP(-t*(3.*lambda)**(1./2.)))**2.)) + (1.)/(2.*a))
+          u(2) = u(1) - dt*(u(1)*((lambda)**(1./2.) + (2.*DEXP(-3.*t*(lambda)**(1./2.))*(lambda)**(1./2.))/&
+                 (1. - DEXP(-3.*t*(lambda)**(1./2.)))) - 2.*b(2)*(lambda + (DEXP(-3.*t*(lambda)**(1./2.))*lambda)/&
+                 (1. - DEXP(-3.*t*(lambda)**(1./2.))) + (DEXP(-t*6.*(lambda)**(1./2.))*lambda)/&
+                 ((1. - DEXP(-3.*t*(lambda)**(1./2.)))**2.)) + (1.)/(2.*a))
           
           ! If b < 0 we save to the file the value b=0, eta=0
 

@@ -46,8 +46,8 @@
       tend = -1
       i = 0
       t=0.
-      lambda_min = 0.5
-      lambda_max = 0.7
+      lambda_min = 0.
+      lambda_max = 0.3
       lambda = (lambda_max + lambda_min)/2.
       num_err = (lambda_max - lambda_min)/2.
         
@@ -80,7 +80,7 @@
 
     	open (unit = 1, file = 'LambdaMinConvergence.txt')
     	write (1,*) '################################################################'
-   	  write (1,*) '#             Risultati numerici della simulazione             #'
+   	  write (1,*) '#             Numerical Results of the Simulation              #'
     	write (1,*) '################################################################'
     	write (1,*) ''
     	write (1,*) '#        step        Lambda_Min        Numerical Error         #'
@@ -124,8 +124,8 @@
 
           ! Estimating the value on second step of a
 
-          b(2) = (DEXP(dt*(lambda/3.)**(1./2.))*(1. - DEXP(-dt*(3.*lambda)**(1./2.)))**(2./3.))/&
-                 (DEXP((lambda/3.)**(1./2.))*(1. - DEXP(-(3.*lambda)**(1./2.)))**(2./3.))
+          b(2) = (DEXP(dt*(lambda)**(1./2.))*(1. - DEXP(-3*dt*(lambda)**(1./2.)))**(2./3.))/&
+                 (DEXP((lambda)**(1./2.))*(1. - DEXP(-3*(lambda)**(1./2.)))**(2./3.))
 
           ! Estimating the value of the first derivative of b in order to have the ratio b/a = 1 at the start of the simulation      
 
@@ -139,18 +139,17 @@
 
               if(t>tend) t=tend
 
-              a = (DEXP(t*(lambda/3.)**(1./2.))*(1. - DEXP(-t*(3.*lambda)**(1./2.)))**(2./3.))/&
-                  (DEXP((lambda/3.)**(1./2.))*(1. - DEXP(-(3.*lambda)**(1./2.)))**(2./3.))
+              a = (DEXP(t*(lambda)**(1./2.))*(1. - DEXP(-3.*t*(lambda)**(1./2.)))**(2./3.))/&
+                  (DEXP((lambda)**(1./2.))*(1. - DEXP(-3.*(lambda)**(1./2.)))**(2./3.))
           
               
               b(2) = u(1)*dt + b(1)
 
-              u(2) = u(1) - dt*(u(1)*((lambda/3.)**(1./2.) + (2.*DEXP(-t*(3.*lambda)**(1./2.))&
-                     *((lambda)/3.)**(1./2.))/(1. - DEXP(-t*(3.*lambda)**(1./2.)))) &
-                     - b(2)*((2.*lambda)/(3.) + ((2./3.)*DEXP(-t*(3.*lambda)**(1./2.))*lambda)/&
-                     ((1.) - DEXP(-t*(3.*lambda)**(1./2.))) + &
-                     ((2./3.)*DEXP(-t*2.*(3.*lambda)**(1./2.))*lambda)/&
-                     (((1.) - DEXP(-t*(3.*lambda)**(1./2.)))**2.)) + (1.)/(2.*a))
+              u(2) = u(1) - dt*(u(1)*((lambda)**(1./2.) + (2.*DEXP(-3.*t*(lambda)**(1./2.))&
+                     *(lambda)**(1./2.))/(1. - DEXP(-3.*t*(lambda)**(1./2.)))) - 2.*b(2)&
+                     *(lambda + (DEXP(-3.*t*(lambda)**(1./2.))*lambda)/(1. - &
+                     DEXP(-3.*t*(lambda)**(1./2.))) + (DEXP(-t*6.*(lambda)**(1./2.))*lambda)/&
+                     ((1. - DEXP(-3.*t*(lambda)**(1./2.)))**2.)) + (1.)/(2.*a))
           
               ! If b < 0 we stop the cycle and select the right part of the interval for the new split
 

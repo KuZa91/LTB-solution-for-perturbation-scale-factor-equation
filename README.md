@@ -7,7 +7,7 @@
 ## Introduction ##
 
 In the following, we will analyze a weakly deformed isotropic Universe toward
-a spherically symmetric model (see [G. Montani et al.](https://inspirehep.net/literature/896693),[P. J. E. Peebles](https://inspirehep.net/literature/376248)), thought as the natural metric framework of the [ΛCDM](https://arxiv.org/abs/astro-ph/9805201) model. We
+a spherically symmetric model (see [G. Montani et al.](https://inspirehep.net/literature/896693), [P. J. E. Peebles](https://inspirehep.net/literature/376248)), thought as the natural metric framework of the [ΛCDM](https://arxiv.org/abs/astro-ph/9805201) model. We
 find that inhomogeneities will arise in the previous context as small perturbations of the order of
 few point percent over the background _FRW_ universe. The obtained picture offers a useful scenario
 to investigate the influence of the inhomogeneity spectrum (left free in the obtained solution), on

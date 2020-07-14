@@ -34,7 +34,7 @@ Details of the analaysis can be found in our [preprint paper](https://arxiv.org/
 - The fits shown in _figs. (5),(6)_, where done by using the [OriginLab](https://www.originlab.com/) software, additional information on the fits used are reported in the [paper](https://arxiv.org/abs/1808.01489v3).
 
 
-## Additional information about the execution of the notebooks
+## Additional information about the execution of the analysis
 
 - In order to avoid errors, tt is highly reccomended to delete the first comment rows of the _.txt_ file before loading that on third part softwares as [Pandas](https://pandas.pydata.org/) or [OriginLab](https://www.originlab.com/);
                                      

@@ -25,7 +25,7 @@ Details of the analaysis can be found in our [preprint paper](https://arxiv.org/
 
 ## Additional Material ##
 
-- In order to reproduce the results of our paper, a simple installation of [fortran 95](https://gcc.gnu.org/wiki/GFortran) is needed;
+- In order to reproduce the results of our paper, a simple installation of [gfortran](https://gcc.gnu.org/wiki/GFortran) is needed;
 
 - The additional files [.plt](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/LTBMatterCostanta.plt) will be used by the main script for generating a first plot of the simulated variables, and require [gnuplot](http://www.gnuplot.info/) in order to be run;
 

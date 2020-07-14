@@ -15,9 +15,9 @@ the propagation of photons or gravitational waves at low redshift values, and in
 may be used to account for several present-stage cosmological problems, such as the [Hubble Tension](https://academic.oup.com/mnras/article-abstract/doi/10.1093/mnras/stz3094/5849454?redirectedFrom=fulltext).
 We present in this directory two different softwares built in _Fortran 90_:
 
-- The [First One](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/LTBMatterCostant.f90) will solve _eqt. (75)_ of the [paper](https://arxiv.org/abs/1808.01489v3) using an _explicit euler_ method, the output of the code will be a _.txt_ having all the informations of the simulated variables needed to generate _figs. (1),(2),(3)_ ; 
+- The [First One](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/LTBMatterCostant.f90) will solve _eqt. (75)_ of the [paper](https://arxiv.org/abs/1808.01489v3) using an _explicit euler_ method, the output of the code will be a _.txt_ having all the informations of the simulated variables needed to generate _figs. ([1](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/EvolutionOfA.png)),([2](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/EvolutionOfB.png)),([3](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/EvolutionOfEta.png))_ ; 
 
-- The [Second One](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/MinLambdaEstimate.f90) will instead find the zeros of _eqt. (75)_ by using a _divide et impera_ method, the output would be a _.txt_ having the estimated value of &Omega; &Lambda; on each iteration step, and may be used to generate _fig. (4)_;
+- The [Second One](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/MinLambdaEstimate.f90) will instead find the zeros of _eqt. (75)_ by using a _divide et impera_ method, the output would be a _.txt_ having the estimated value of &Omega; &Lambda; on each iteration step, and may be used to generate _fig. ([4](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/Lambda_min.png))_;
 
 ## Analysis Details ##
 
@@ -31,7 +31,7 @@ Details of the analaysis can be found in our [preprint paper](https://arxiv.org/
 
 - The directory, contains some of the [figures](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/EvolutionOfA.png) used for the [paper](https://arxiv.org/abs/1808.01489v3), these figures were generated using the [Anaconda](https://www.anaconda.com/) distribution of python, as well as the [seaborn](https://seaborn.pydata.org/) data visualization library;
 
-- The fits shown in _figs. (5),(6)_, where done by using the [OriginLab](https://www.originlab.com/) software, additional information on the fits used are reported in the [paper](https://arxiv.org/abs/1808.01489v3).
+- The fits shown in _figs. ([5](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/bfit.png)),([6](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/etafit.png))_, where done by using the [OriginLab](https://www.originlab.com/) software, additional information on the fits used are reported in the [paper](https://arxiv.org/abs/1808.01489v3).
 
 
 ## Additional information about the execution of the analysis

@@ -15,7 +15,7 @@ the propagation of photons or gravitational waves at low redshift values, and in
 may be used to account for several present-stage cosmological problems, such as the [Hubble Tension](https://academic.oup.com/mnras/article-abstract/doi/10.1093/mnras/stz3094/5849454?redirectedFrom=fulltext).
 We present in this directory two different softwares built in _Fortran 95_:
 
-- The [First One](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/LTBMatterCostant.f90) will solve _eqt. (75)_ of the [paper](https://arxiv.org/abs/1808.01489v3), in function of $\Omega_{\Lambda}$, using an _explicit euler_ method, the output of the code will be a _.txt_ having all the informations of the simulated variables needed to generate _figs. (1),(2),(3)_ ; 
+- The [First One](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/LTBMatterCostant.f90) will solve _eqt. (75)_ of the [paper](https://arxiv.org/abs/1808.01489v3), in function of $\omega_{\lambda}$, using an _explicit euler_ method, the output of the code will be a _.txt_ having all the informations of the simulated variables needed to generate _figs. (1),(2),(3)_ ; 
 
 - The [Second One](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/MinLambdaEstimate.f90) wi
 

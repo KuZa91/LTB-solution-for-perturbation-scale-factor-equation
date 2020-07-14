@@ -17,7 +17,7 @@ We present in this directory two different softwares built in _Fortran 95_:
 
 - The [First One](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/LTBMatterCostant.f90) will solve _eqt. (75)_ of the [paper](https://arxiv.org/abs/1808.01489v3) using an _explicit euler_ method, the output of the code will be a _.txt_ having all the informations of the simulated variables needed to generate _figs. (1),(2),(3)_ ; 
 
-- The [Second One](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/MinLambdaEstimate.f90) will instead find the zeros of _eqt. (75)_ by using a _divide et impera_ method, the output would be a _.txt_ having the estimated value of &Omega &Lambda on each iteration step, and may be used to generate _fig. (4)_ of the paper;
+- The [Second One](https://github.com/KuZa91/LTB-solution-for-perturbation-scale-factor-equation/blob/master/MinLambdaEstimate.f90) will instead find the zeros of _eqt. (75)_ by using a _divide et impera_ method, the output would be a _.txt_ having the estimated value of &Omega; &Lambda; on each iteration step, and may be used to generate _fig. (4)_ of the paper;
 
 
 ## Analysis Details ##
